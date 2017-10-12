@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af8875c-20eb-43f9-9ecf-38833cfa4d56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/bruch.rst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bruch/bruch.py" afterPath="$PROJECT_DIR$/bruch.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Testall.py" afterPath="$PROJECT_DIR$/Testall.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_Addition.py" afterPath="$PROJECT_DIR$/Unit_Addition.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_Allgemein.py" afterPath="$PROJECT_DIR$/Unit_Allgemein.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_Division.py" afterPath="$PROJECT_DIR$/Unit_Division.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_Multiplikation.py" afterPath="$PROJECT_DIR$/Unit_Multiplikation.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_String.py" afterPath="$PROJECT_DIR$/Unit_String.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_Subtraktion.py" afterPath="$PROJECT_DIR$/Unit_Subtraktion.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_Vergleich.py" afterPath="$PROJECT_DIR$/Unit_Vergleich.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_ordner/Unit_Zusatz.py" afterPath="$PROJECT_DIR$/Unit_Zusatz.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/bruch.rst" afterPath="$PROJECT_DIR$/docs/source/bruch.rst" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/docs/source/conf.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#686#695#0" expanded="true" />
               </folding>
@@ -89,8 +78,8 @@
       <file leaf-file-name="bruch.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/source/bruch.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -642,7 +631,7 @@
     <entry file="file://$PROJECT_DIR$/docs/source/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#686#695#0" expanded="true" />
           </folding>
@@ -659,8 +648,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/bruch.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

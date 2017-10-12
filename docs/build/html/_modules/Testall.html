@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Testall &#8212; Bruch Test 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Bruch Test 1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for Testall</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on 27.12.2013</span>
+
+<span class="sd">@author: uhs374h</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+
+<div class="viewcode-block" id="TestAllgemein"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein">[docs]</a><span class="k">class</span> <span class="nc">TestAllgemein</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestAllgemein.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testFloat"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testFloat">[docs]</a>    <span class="k">def</span> <span class="nf">testFloat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.75</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testInt"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testInt">[docs]</a>    <span class="k">def</span> <span class="nf">testInt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testComplex"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testComplex">[docs]</a>    <span class="k">def</span> <span class="nf">testComplex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.75</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testInvert"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testInvert">[docs]</a>    <span class="k">def</span> <span class="nf">testInvert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">z</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="o">~</span><span class="n">b</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testcreateBruchZeroError"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testcreateBruchZeroError">[docs]</a>    <span class="k">def</span> <span class="nf">testcreateBruchZeroError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="n">Bruch</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testcreateBruchWrongTypeNenner"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testcreateBruchWrongTypeNenner">[docs]</a>    <span class="k">def</span> <span class="nf">testcreateBruchWrongTypeNenner</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="n">Bruch</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testcreateBruchWrongTypeZaehler"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testcreateBruchWrongTypeZaehler">[docs]</a>    <span class="k">def</span> <span class="nf">testcreateBruchWrongTypeZaehler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="n">Bruch</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testInteger"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testInteger">[docs]</a>    <span class="k">def</span> <span class="nf">testInteger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;(3)&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testPow"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testPow">[docs]</a>    <span class="k">def</span> <span class="nf">testPow</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">**</span> <span class="n">h</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">zaehler</span> <span class="o">**</span> <span class="n">h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">nenner</span> <span class="o">**</span> <span class="n">h</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testPowError1"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testPowError1">[docs]</a>    <span class="k">def</span> <span class="nf">testPowError1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__pow__</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testPowError2"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testPowError2">[docs]</a>    <span class="k">def</span> <span class="nf">testPowError2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__pow__</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.test_makeBruchTypeError"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.test_makeBruchTypeError">[docs]</a>    <span class="k">def</span> <span class="nf">test_makeBruchTypeError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="n">Bruch</span><span class="o">.</span><span class="n">_Bruch__makeBruch</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.test_makeBruchInt"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.test_makeBruchInt">[docs]</a>    <span class="k">def</span> <span class="nf">test_makeBruchInt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="n">b4</span> <span class="o">=</span> <span class="n">Bruch</span><span class="o">.</span><span class="n">_Bruch__makeBruch</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="n">b4</span><span class="o">.</span><span class="n">zaehler</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testAbs"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testAbs">[docs]</a>    <span class="k">def</span> <span class="nf">testAbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b4</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">b4</span><span class="p">)</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testNeg"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testNeg">[docs]</a>    <span class="k">def</span> <span class="nf">testNeg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b4</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="o">-</span><span class="n">b4</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></div>
+
+    <span class="c1"># test of references</span>
+<div class="viewcode-block" id="TestAllgemein.testRef"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testRef">[docs]</a>    <span class="k">def</span> <span class="nf">testRef</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAllgemein.testRef2"><a class="viewcode-back" href="../Testall.html#Testall.TestAllgemein.testRef2">[docs]</a>    <span class="k">def</span> <span class="nf">testRef2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b4</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="ow">is</span> <span class="n">b4</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TestVergleich"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich">[docs]</a><span class="k">class</span> <span class="nc">TestVergleich</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestVergleich.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestVergleich.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestVergleich.testEqual"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.testEqual">[docs]</a>    <span class="k">def</span> <span class="nf">testEqual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestVergleich.testNotEqual"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.testNotEqual">[docs]</a>    <span class="k">def</span> <span class="nf">testNotEqual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestVergleich.testGE"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.testGE">[docs]</a>    <span class="k">def</span> <span class="nf">testGE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestVergleich.testLE"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.testLE">[docs]</a>    <span class="k">def</span> <span class="nf">testLE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestVergleich.testLT"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.testLT">[docs]</a>    <span class="k">def</span> <span class="nf">testLT</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestVergleich.testGT"><a class="viewcode-back" href="../Testall.html#Testall.TestVergleich.testGT">[docs]</a>    <span class="k">def</span> <span class="nf">testGT</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TestString"><a class="viewcode-back" href="../Testall.html#Testall.TestString">[docs]</a><span class="k">class</span> <span class="nc">TestString</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestString.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestString.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestString.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestString.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestString.teststr"><a class="viewcode-back" href="../Testall.html#Testall.TestString.teststr">[docs]</a>    <span class="k">def</span> <span class="nf">teststr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;(3/2)&quot;</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">str1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestString.teststr2"><a class="viewcode-back" href="../Testall.html#Testall.TestString.teststr2">[docs]</a>    <span class="k">def</span> <span class="nf">teststr2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;(3/2)&quot;</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="n">str1</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TestAddition"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition">[docs]</a><span class="k">class</span> <span class="nc">TestAddition</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestAddition.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestAddition.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestAddition.testplus"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testplus">[docs]</a>    <span class="k">def</span> <span class="nf">testplus</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2.3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAddition.testplus2"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testplus2">[docs]</a>    <span class="k">def</span> <span class="nf">testplus2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">3.5</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAddition.testplus3"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testplus3">[docs]</a>    <span class="k">def</span> <span class="nf">testplus3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="mi">3</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">4.5</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAddition.testradd"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testradd">[docs]</a>    <span class="k">def</span> <span class="nf">testradd</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">4.5</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAddition.testiAdd"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testiAdd">[docs]</a>    <span class="k">def</span> <span class="nf">testiAdd</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestAddition.testiAdd2"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testiAdd2">[docs]</a>    <span class="k">def</span> <span class="nf">testiAdd2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestAddition.testaddError"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testaddError">[docs]</a>    <span class="k">def</span> <span class="nf">testaddError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__add__</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestAddition.testiAddError"><a class="viewcode-back" href="../Testall.html#Testall.TestAddition.testiAddError">[docs]</a>    <span class="k">def</span> <span class="nf">testiAddError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">__iadd__</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TestSubtraktion"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion">[docs]</a><span class="k">class</span> <span class="nc">TestSubtraktion</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestSubtraktion.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testminus"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testminus">[docs]</a>    <span class="k">def</span> <span class="nf">testminus</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">-</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.7</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testminus2"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testminus2">[docs]</a>    <span class="k">def</span> <span class="nf">testminus2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testminus3"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testminus3">[docs]</a>    <span class="k">def</span> <span class="nf">testminus3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">-</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.5</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testiSubError"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testiSubError">[docs]</a>    <span class="k">def</span> <span class="nf">testiSubError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">__isub__</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testrsubError"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testrsubError">[docs]</a>    <span class="k">def</span> <span class="nf">testrsubError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;TypeError!!!</span>
+
+<span class="sd">        self.b2=2.0-self.b2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__rsub__</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testiSub"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testiSub">[docs]</a>    <span class="k">def</span> <span class="nf">testiSub</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">-=</span> <span class="mi">2</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testiSub2"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testiSub2">[docs]</a>    <span class="k">def</span> <span class="nf">testiSub2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">-=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestSubtraktion.testrsub"><a class="viewcode-back" href="../Testall.html#Testall.TestSubtraktion.testrsub">[docs]</a>    <span class="k">def</span> <span class="nf">testrsub</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.5</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TestMultiplikation"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation">[docs]</a><span class="k">class</span> <span class="nc">TestMultiplikation</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestMultiplikation.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testmal"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testmal">[docs]</a>    <span class="k">def</span> <span class="nf">testmal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">*</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testmal2"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testmal2">[docs]</a>    <span class="k">def</span> <span class="nf">testmal2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2.25</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testmal3"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testmal3">[docs]</a>    <span class="k">def</span> <span class="nf">testmal3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testiMulError"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testiMulError">[docs]</a>    <span class="k">def</span> <span class="nf">testiMulError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">__imul__</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testiMul"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testiMul">[docs]</a>    <span class="k">def</span> <span class="nf">testiMul</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">*=</span> <span class="mi">2</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testiMul2"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testiMul2">[docs]</a>    <span class="k">def</span> <span class="nf">testiMul2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">*=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testrmal"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testrmal">[docs]</a>    <span class="k">def</span> <span class="nf">testrmal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestMultiplikation.testmulError"><a class="viewcode-back" href="../Testall.html#Testall.TestMultiplikation.testmulError">[docs]</a>    <span class="k">def</span> <span class="nf">testmulError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__mul__</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TestDivision"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision">[docs]</a><span class="k">class</span> <span class="nc">TestDivision</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestDivision.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestDivision.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestDivision.testdiv"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testdiv">[docs]</a>    <span class="k">def</span> <span class="nf">testdiv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">/</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.375</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testdiv2"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testdiv2">[docs]</a>    <span class="k">def</span> <span class="nf">testdiv2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.75</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testdiv3"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testdiv3">[docs]</a>    <span class="k">def</span> <span class="nf">testdiv3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.75</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testrdivError"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testrdivError">[docs]</a>    <span class="k">def</span> <span class="nf">testrdivError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__rtruediv__</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testrdiv"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testrdiv">[docs]</a>    <span class="k">def</span> <span class="nf">testrdiv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testdivZeroError"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testdivZeroError">[docs]</a>    <span class="k">def</span> <span class="nf">testdivZeroError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__truediv__</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testdivTypeError"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testdivTypeError">[docs]</a>    <span class="k">def</span> <span class="nf">testdivTypeError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__truediv__</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testdivZeroError2"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testdivZeroError2">[docs]</a>    <span class="k">def</span> <span class="nf">testdivZeroError2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="o">.</span><span class="n">__truediv__</span><span class="p">,</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestDivision.testrdivZeroError"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testrdivZeroError">[docs]</a>    <span class="k">def</span> <span class="nf">testrdivZeroError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">bneu</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">,</span> <span class="n">bneu</span><span class="o">.</span><span class="n">__rtruediv__</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestDivision.testiDiv"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testiDiv">[docs]</a>    <span class="k">def</span> <span class="nf">testiDiv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">/=</span> <span class="mi">2</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestDivision.testiDiv2"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testiDiv2">[docs]</a>    <span class="k">def</span> <span class="nf">testiDiv2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">/=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestDivision.testiDivError"><a class="viewcode-back" href="../Testall.html#Testall.TestDivision.testiDivError">[docs]</a>    <span class="k">def</span> <span class="nf">testiDivError</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">__itruediv__</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="TestIteration"><a class="viewcode-back" href="../Testall.html#Testall.TestIteration">[docs]</a><span class="k">class</span> <span class="nc">TestIteration</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestIteration.setUp"><a class="viewcode-back" href="../Testall.html#Testall.TestIteration.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b2</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b3</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestIteration.tearDown"><a class="viewcode-back" href="../Testall.html#Testall.TestIteration.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestIteration.testTuple"><a class="viewcode-back" href="../Testall.html#Testall.TestIteration.testTuple">[docs]</a>    <span class="k">def</span> <span class="nf">testTuple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">z</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">Bruch</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">assert</span><span class="p">(</span><span class="n">z</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestIteration.testTuple2"><a class="viewcode-back" href="../Testall.html#Testall.TestIteration.testTuple2">[docs]</a>    <span class="k">def</span> <span class="nf">testTuple2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">z</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">Bruch</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestIteration.testTuple3_Error"><a class="viewcode-back" href="../Testall.html#Testall.TestIteration.testTuple3_Error">[docs]</a>    <span class="k">def</span> <span class="nf">testTuple3_Error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">b3</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tryIndex</span><span class="p">,</span> <span class="n">b3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="TestIteration.tryIndex"><a class="viewcode-back" href="../Testall.html#Testall.TestIteration.tryIndex">[docs]</a>    <span class="k">def</span> <span class="nf">tryIndex</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">obj</span><span class="p">[</span><span class="n">index</span><span class="p">]</span></div></div>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Filip Scopulovic.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
