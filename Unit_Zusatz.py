@@ -3,7 +3,6 @@ Created on 27.12.2013
 
 @author: uhs374h
 """
-from bruch.bruch import *
 import unittest
 
 
